@@ -8,7 +8,7 @@
 
 3. 필수 구현사항 및 진행률
 
-   - 상단 GNB(Global Navigation Bar) 마크업 : 1/17일 10%
+   - 상단 GNB(Global Navigation Bar) 마크업 : 1/18일 15%
    - 슬라이드(또는 캐러샐이라고 불림) : 1/17일 0%
    - 반응형 : 1/17일 0%
    - netlify로 배포 : 1/15일 0%

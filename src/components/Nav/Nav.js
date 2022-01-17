@@ -15,7 +15,15 @@ const Nav = () => {
               <Logotext>wanted</Logotext>
             </Logobar>
 
-            <Listbar>채용</Listbar>
+            <Listbar>
+              <ListName>채용</ListName>
+              <ListName>이벤트</ListName>
+              <ListName>직군별 연봉</ListName>
+              <ListName>이력서</ListName>
+              <ListName>커뮤니티</ListName>
+              <ListName>프리랜서</ListName>
+              <ListName>AI 합격예측</ListName>
+            </Listbar>
 
             <Iconbar>기업서비스</Iconbar>
           </Mainbar>
@@ -65,6 +73,17 @@ const Logotext = styled.a`
   cursor: pointer;
 `;
 
-const Listbar = styled.div``;
+const Listbar = styled.ul`
+  list-style: none;
+  display: flex;
+`;
+
+const ListName = styled.li`
+  padding: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+`;
 
 const Iconbar = styled.div``;
