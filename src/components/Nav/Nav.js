@@ -25,7 +25,13 @@ const Nav = () => {
               <ListName>AI 합격예측</ListName>
             </Listbar>
 
-            <Iconbar>기업서비스</Iconbar>
+            <Iconbar>
+              <Listbar>
+                <ListIcon></ListIcon>
+                <ListIcon></ListIcon>
+                <ListIcon></ListIcon>
+              </Listbar>
+            </Iconbar>
           </Mainbar>
         </Inner>
       </Header>
@@ -87,3 +93,5 @@ const ListName = styled.li`
 `;
 
 const Iconbar = styled.div``;
+
+const ListIcon = styled.li``;
