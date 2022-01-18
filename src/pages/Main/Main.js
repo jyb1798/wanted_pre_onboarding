@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import Slider from "./Slider";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
@@ -17,7 +17,9 @@ const Main = () => {
   return (
     <div>
       <GlobalStyles />
-      <MainSlide>메인 페이지입니다_슬라이드</MainSlide>
+      <MainSlide>
+        <Slider />
+      </MainSlide>
     </div>
   );
 };
