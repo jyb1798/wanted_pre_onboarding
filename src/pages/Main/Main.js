@@ -26,6 +26,6 @@ const Main = () => {
 
 const MainSlide = styled.div`
   width: 100%;
-  margin-top: 100px;
+  margin-top: 20px;
 `;
 export default Main;

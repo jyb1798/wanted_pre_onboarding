@@ -21,7 +21,7 @@ export default function Slider() {
     if (currentSlide >= TOTAL_SLIDES) {
       // 더 이상 넘어갈 슬라이드가 없으면
       setCurrentSlide(0); // 1번째 사진으로 넘어갑니다.
-      // return;  // 클릭이 작동하지 않습니다.
+      return;
     } else {
       setCurrentSlide(currentSlide + 1);
     }
@@ -63,19 +63,16 @@ export default function Slider() {
 }
 const Container = styled.div`
   width: 100%;
-  margin: auto;
   height: 100%;
   overflow: hidden;
 `;
 const SlideButton = styled.div`
   color: black;
-  border-radius: 10px;
+  border-radius: 10%;
   border: 1px solid black;
-  cursor: pointer;
   }
 `;
 const SliderContainer = styled.div`
-  margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
 `;

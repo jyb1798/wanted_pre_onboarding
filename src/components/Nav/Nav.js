@@ -109,7 +109,7 @@ const Inner = styled.div`
 const Mainbar = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 // Logobar 영역
@@ -123,13 +123,14 @@ const Logobar = styled.div`
 const Seemore = styled.img`
   width: 17px;
   height: 14px;
-  margin-top: -2px;
   margin-right: 15px;
 `;
 
-const Logotext = styled.a`
-  text-decoration: inherit;
-  cursor: pointer;
+const Logotext = styled.div`
+  margin-top: -2px;
+  font-size: 22px;
+  font-family: Arial, "Malgun Gothic", serif;
+  font-weight: 700;
 `;
 
 // Listbar 영역
