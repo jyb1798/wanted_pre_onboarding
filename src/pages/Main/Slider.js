@@ -10,6 +10,11 @@ import img7 from "../../images/7.jpg";
 import img8 from "../../images/8.jpg";
 import img9 from "../../images/9.jpg";
 import Slide from "./Slide";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 const TOTAL_SLIDES = 9;
 
@@ -44,6 +49,7 @@ export default function Slider() {
   return (
     <Container>
       <SliderContainer ref={slideRef}>
+        <Slide img={img9} />
         <Slide img={img1} />
         <Slide img={img2} />
         <Slide img={img3} />
@@ -53,10 +59,15 @@ export default function Slider() {
         <Slide img={img7} />
         <Slide img={img8} />
         <Slide img={img9} />
+        <Slide img={img1} />
       </SliderContainer>
       <Center>
-        <SlideButton onClick={PrevSlide}>Prev</SlideButton>
-        <SlideButton onClick={NextSlide}>Next</SlideButton>
+        <SlideButton onClick={PrevSlide}>
+          <FontAwesomeIcon icon={faChevronLeft} style={{ color: "gray" }} />
+        </SlideButton>
+        <SlideButton onClick={NextSlide}>
+          <FontAwesomeIcon icon={faChevronRight} style={{ color: "gray" }} />
+        </SlideButton>
       </Center>
     </Container>
   );
@@ -69,7 +80,7 @@ const Container = styled.div`
 const SlideButton = styled.div`
   color: black;
   border-radius: 10%;
-  border: 1px solid black;
+  border: none;
   }
 `;
 const SliderContainer = styled.div`
@@ -78,5 +89,13 @@ const SliderContainer = styled.div`
 `;
 
 const Center = styled.div`
-  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 120px;
+  width: 30px;
+  height: 60px;
+  opacity: 0.5;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
 `;
