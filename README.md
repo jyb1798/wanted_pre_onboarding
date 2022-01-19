@@ -13,7 +13,7 @@
    - 반응형 : **1/19일 30%**
      - max-width 767px을 기준으로 Nav의 아이콘과 메뉴탭이 변경되는 부분을 반응형으로 구현하였습니다.
    - netlify로 배포 : 1/19일 100%
-     **- 사이트 url : https://hopeful-bell-543b20.netlify.app**
+     - **사이트 url : https://hopeful-bell-543b20.netlify.app**
 
 4. 적용 기술
    - yarn
