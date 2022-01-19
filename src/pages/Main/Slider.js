@@ -24,8 +24,7 @@ export default function Slider() {
 
   const NextSlide = () => {
     if (currentSlide >= TOTAL_SLIDES) {
-      // 더 이상 넘어갈 슬라이드가 없으면
-      setCurrentSlide(0); // 1번째 사진으로 넘어갑니다.
+      setCurrentSlide(0);
       return;
     } else {
       setCurrentSlide(currentSlide + 1);
@@ -34,8 +33,7 @@ export default function Slider() {
   // Prev 버튼 클릭 시
   const PrevSlide = () => {
     if (currentSlide === 0) {
-      setCurrentSlide(TOTAL_SLIDES); // 마지막 사진으로 넘어갑니다.
-      // return;  // 클릭이 작동하지 않습니다.
+      setCurrentSlide(TOTAL_SLIDES);
     } else {
       setCurrentSlide(currentSlide - 1);
     }
@@ -43,13 +41,12 @@ export default function Slider() {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 에니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
   }, [currentSlide]);
 
   return (
     <Container>
       <SliderContainer ref={slideRef}>
-        <Slide img={img9} />
         <Slide img={img1} />
         <Slide img={img2} />
         <Slide img={img3} />
@@ -59,43 +56,66 @@ export default function Slider() {
         <Slide img={img7} />
         <Slide img={img8} />
         <Slide img={img9} />
-        <Slide img={img1} />
       </SliderContainer>
-      <Center>
-        <SlideButton onClick={PrevSlide}>
-          <FontAwesomeIcon icon={faChevronLeft} style={{ color: "gray" }} />
-        </SlideButton>
-        <SlideButton onClick={NextSlide}>
-          <FontAwesomeIcon icon={faChevronRight} style={{ color: "gray" }} />
-        </SlideButton>
-      </Center>
+
+      <SlideLeftButton onClick={PrevSlide}>
+        <FontAwesomeIcon
+          icon={faChevronLeft}
+          style={{
+            fontSize: "25px",
+            color: "gray",
+            marginLeft: "5px",
+            marginTop: "15px",
+          }}
+        />
+      </SlideLeftButton>
+
+      <SlideRightButton onClick={NextSlide}>
+        <FontAwesomeIcon
+          icon={faChevronRight}
+          style={{
+            fontSize: "25px",
+            color: "gray",
+            marginLeft: "7px",
+            marginTop: "15px",
+          }}
+        />
+      </SlideRightButton>
     </Container>
   );
 }
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
 `;
-const SlideButton = styled.div`
-  color: black;
-  border-radius: 10%;
-  border: none;
-  }
-`;
 const SliderContainer = styled.div`
-  margin-bottom: 10px;
   display: flex;
 `;
 
-const Center = styled.div`
-  justify-content: center;
-  position: absolute;
-  top: 120px;
-  width: 30px;
-  height: 60px;
+const SlideLeftButton = styled.div`
+  border-radius: 10%;
+  border: none;
   opacity: 0.5;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  background-color: white;
   border-radius: 15px;
-  background-color: #fff;
-  font-size: 16px;
+  height: 60px;
+  width: 30px;
+`;
+
+const SlideRightButton = styled.div`
+  border-radius: 10%;
+  border: none;
+  opacity: 0.5;
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  background-color: white;
+  border-radius: 15px;
+  height: 60px;
+  width: 30px;
 `;
